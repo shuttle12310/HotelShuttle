@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1€ Hotel Shuttle</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#eaf7ff,#fff);color:#123}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.card{max-width:720px;width:100%;background:white;border-radius:28px;padding:42px 28px;text-align:center;box-shadow:0 15px 45px #0002}
+.badge{display:inline-block;background:#e8f5ff;padding:9px 16px;border-radius:999px;font-weight:bold}
+h1{font-size:clamp(40px,9vw,76px);margin:18px 0 8px}
+h1 span{color:#1687d9}
+.subtitle{font-size:22px;color:#567;margin-bottom:28px}
+.price{font-size:56px;font-weight:800;margin:20px 0}
+.price small{font-size:22px;font-weight:500}
+.route{display:flex;justify-content:center;gap:12px;align-items:center;font-size:20px;margin:25px 0;flex-wrap:wrap}
+.stop{padding:12px 18px;background:#f1f7fa;border-radius:14px}
+.arrow{font-size:28px}
+button{border:0;background:#1687d9;color:white;font-size:19px;font-weight:bold;padding:16px 30px;border-radius:16px;cursor:pointer}
+.info{margin-top:28px;color:#68757d;font-size:14px;line-height:1.5}
+.footer{margin-top:24px;font-weight:bold}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="card">
+    <div class="badge">🚐 Schnell • Einfach • 1 €</div>
+    <h1>1€ <span>Hotel Shuttle</span></h1>
+    <div class="subtitle">Vom Parkplatz direkt zum Hoteleingang.</div>
+    <div style="font-size:20px;font-weight:700;margin:10px 0 22px;">Hotel Berghof · Alpendorf 1</div>
+
+    <div class="price">1 € <small>pro Fahrt</small></div>
+    <div style="margin:18px auto 8px;">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhIAAAISAQAAAACxRhsSAAAEw0lEQVR4nO2dTYrjSBCFX4wEtUxDH8BHkW/QRyr6SHMD6Sh1gAZpaUjxZpF/IbenuqFdiTFPC2HL8kcKgsj4eZky4m+P5Z+/RgBiiCGGGGKIIYYYYojRGJaPEcBmBmwjzE67Adgt37qZ2QWAXbZy/+XB4xBDjE8ZE0lyrZfD1crXgcmAl3MEgN04YyBJ8sh4xDjEEONTRnOWGJg/bSOwnHbjjN3ssr0Ryynfn53vw8chhhh/zlhsBJbTQHv/GGHv60DOyZUCduk2DjHE+B/GcgLKzH617EDD1ex9BTB9jLd/eOJnEeNlGMXsAgFsABBWpMxp+b7SphkwbN+I5RxHLN/zfb498CzPIsbrMuATIgzEtP7Bqdw/keT8LM8ixusykj89NE93A8LVgBDhT+6HY7P1WZ5FjNdlZH+aXeRAMuVMQPKd6QgR5Ap3yjfLn4rRheHn/SkbHpEiAEYksyUjsu2STCeEqHlfjF4MsB45+CTJOXhjBVxhP3vbdJI/FaMPo/jTEME5kJxDdFM+5xBBFmMFgk+6ZKdidGIUn1hD0xSfpsQpu004m6z/YHO+z/IsYrw8Y+LVzM61sA/AR6Ah5h4VAml22s3sdMt4xDjEEOP+4eZ91uKoS/+ZwwBXF2hRgeZ9Mfowar7vLbFYZ/3k4tMcEJRfZadidGXslqWnGAhsWYeSPmEbc+l0Run+/zjHXxiPGIcYYtw7yrxfk3744lQ5Du4196ioPEqMXoyiQ9kM2XeGnwZgH4EAmJOlnGNpsm5vBLYx8nHjEEOM3zPyfB4i7AIAyRKRJdLZd368JQE1lvNV+b4YXRm+Gnq8hhSpAigVqnhsskblUWJ0Ziznq5W+PYsrDeVaKkTVtX0TSSw2wi6PHocYYnzGqJaI6WNEWhrlMn8z449zBPmR0/9UU50fPQ4xxLh71DzqhCYz5XICMK37mKf8f79FQxhoCIQhRGA5DY8chxhifHrk6j5rNTTkdr+T7Tv9aY1P0zXFp2J0YThdX7a6UCV9K3IH9diPcuv3VT8Vow/jkMIXqVQpU/HWMFv9qrlX2akYX8+o604Gp9PPxhqKF3XqE6dOla5PjG6Mo17Ky1FTo3Ru7VHkr016KjsVoxOjxqfFgTpnuaIo/JpKqjQFpJMWoyfjoOtbUYTRTd5flvC5LCu3opTvi9GNcZjomXVQxb2WgpVrSoWqnFprbvUszyLG6zKcnzysfI5e8Jd8bFvqB0D1UzF6Mly+33ImJ0dl8aKHOv/gjFp2KsbXM47r99uOJ0Mxx1o/dWWqmv7Ln4rRh1HjU+AwvRchX/7Be9a2yk/+VIxODN/fb5vx5WqUb1TlcmrVpKp+KkZHxm1/P11LkepNOb9O/hPpjFV2KsbXM273P20myrp0H22OTyXW6l4Vn4rRlVGNsEik6zb8JVJtr5pA0Z/qfSdi9GL4/U/rjtFlZ5TBr4Wa0babArQuWoyejF/stHWcmpqPRUVdigM135KditGFccef3qikhppCtVaU6qdi9GXcvu+EQBwxrfvItGYq/brCphV5x4lp3kcCQxFRPcuziPG6jDvvOwGKGKVM+TXL8n0r6aXE6Me4fd8Jb15+4jeb4PEW5ftiiCGGGGKIIYYYYjyc8R+hZxqy1yQrqAAAAABJRU5ErkJggg==" alt="QR-Code" style="width:170px;height:170px;border-radius:12px;">
+    </div>
+    <div style="font-weight:bold;color:#1687d9;margin-bottom:18px;">QR-Code scannen und Fahrt anfragen</div>
+
+    <div class="route">
+      <div class="stop">🅿️ Parkplatz</div>
+      <div class="arrow">→</div>
+      <div class="stop">🏨 Hoteleingang</div>
+    </div>
+
+    <button onclick="requestRide()">
+      Fahrt anfragen
+    </button>
+
+    <script>
+    function requestRide() {
+      alert("Bitte vor Ort Preis ausmachen.");
+      window.location.href =
+        "https://wa.me/436641904749?text=" +
+        encodeURIComponent("Hallo! Ich möchte jetzt vom Parkplatz zum Hoteleingang gefahren werden.");
+    }
+    </script>
+
+    <div class="info">
+      Unser kleines Shuttle-Angebot hilft Gästen beim Weg vom Parkplatz zum Hoteleingang.
+      Preis: nur 1 € pro Fahrt. <strong>Bezahlung erfolgt vor Ort in bar.</strong>
+    </div>
+
+    <div class="footer">1€ Hotel Shuttle</div>
+  </div>
+</section>
+</body>
+</html>
